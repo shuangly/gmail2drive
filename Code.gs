@@ -26,9 +26,9 @@ function main(){
 }
 
 function getFolder_(){
-  const fi = DriveApp.getFoldersByName(FOLDER_NAME);
-  if(fi.hasNext()){
-    return fi.next();
+  const folderIterator = DriveApp.getFoldersByName(FOLDER_NAME);
+  if(folderIterator.hasNext()){
+    return folderIterator.next();
   } else{
     Logger.log('Error: drive folder not found');
     return null;
